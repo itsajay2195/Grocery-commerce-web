@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 
 const MainBanner = () => {
   return (
-    <div className="relative px-6 md:px-16 lg:px-24 xl:px-32 py-8">
+    <div className="relative ">
       {/* Responsive Banner Images */}
       <img
         src={assets.main_banner_bg}

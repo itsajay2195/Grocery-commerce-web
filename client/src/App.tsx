@@ -10,7 +10,11 @@ const App = () => {
   return (
     <div>
       {!isSellerPath && <Navbar />}
-      <div className={isSellerPath ? "px-6 md:px-16 lg:px-24 xl:px-32" : ""}>
+      <div
+        className={
+          isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32 xxl:px-48"
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
