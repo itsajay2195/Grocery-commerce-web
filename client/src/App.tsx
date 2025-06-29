@@ -4,10 +4,12 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 
 const App = () => {
-  const isSellerPath = useLocation().pathname.includes("seller");
+  const location = useLocation();
+  const isSellerPath = location.pathname.startsWith("/seller");
+
   return (
     <div>
-      {isSellerPath ? null : <Navbar />}
+      {!isSellerPath && <Navbar />}
       <div className={isSellerPath ? "px-6 md:px-16 lg:px-24 xl:px-32" : ""}>
         <Routes>
           <Route path="/" element={<Home />} />
